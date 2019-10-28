@@ -112,6 +112,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "acoustic-content-web-app"
 }
