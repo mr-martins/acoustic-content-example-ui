@@ -114,5 +114,8 @@
       }
     }
   },
-  "defaultProject": "acoustic-content-web-app"
+  "defaultProject": "acoustic-content-web-app",
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  }
 }
