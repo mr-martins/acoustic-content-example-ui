@@ -1,12 +1,25 @@
-import { Action, createReducer } from '@ngrx/store';
+import { Action, createReducer, on } from '@ngrx/store';
 import { Article } from '../../models/article.model';
+import * as ArticlePageActions from '../actions/article-page.actions';
 
 export const articleFeatureKey = 'article';
 
-export const initialState: Article = {} as Article;
+export interface ArticleState {
+  article: Article;
+  errorMessage: string;
+}
 
-export function reducer(state: Article | undefined, action: Action) {
-  return createReducer(
-    initialState,
-  );
+export const initialState: ArticleState = {
+  article: null,
+  errorMessage: null
+};
+
+const articleReducer = createReducer(
+  initialState,
+  on(ArticlePageActions.fetchArticleSucceed, (state, { article }) => ({ article })),
+  on(ArticlePageActions.fetchArticleFailed, (state, { errorMessage }) => ({ article: null, errorMessage })),
+);
+
+export function reducer(state: ArticleState, action: Action) {
+  return articleReducer(state, action);
 }
