@@ -1,29 +1,34 @@
-import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { LayoutComponent } from './layout.component';
+import { MockComponents } from 'ng-mocks';
+import { MatToolbar } from '@angular/material';
+import { RouterOutlet } from '@angular/router';
+import { By } from '@angular/platform-browser';
 
 describe('LayoutComponent', () => {
-  let component: LayoutComponent;
   let fixture: ComponentFixture<LayoutComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [LayoutComponent],
-      schemas: [
-        NO_ERRORS_SCHEMA,
-      ]
-    })
-      .compileComponents();
+      declarations: [
+        LayoutComponent,
+        MockComponents(
+          RouterOutlet,
+          MatToolbar
+        ),
+      ],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(LayoutComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('should display app name', () => {
+    // when
+    fixture.detectChanges();
+
+    // then
+    expect(fixture.debugElement.query(By.css('h1')).nativeElement.innerText).toEqual('The Acoustic Content');
   });
 });

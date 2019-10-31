@@ -5,8 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build --configuration=production",
-    "test": "ng test",
-    "test:cc": "ng test --code-coverage=true",
+    "test": "ng test --watch=false",
+    "test:cc": "ng test --code-coverage=true --watch=false",
     "lint": "ng lint"
   },
   "private": true,

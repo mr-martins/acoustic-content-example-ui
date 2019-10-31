@@ -2,6 +2,11 @@
 
 ## Usage
 
+### Requirements
+
+* node ^10.0.0
+* npm ^6.0.0
+
 ### Development server
 
 *Run `npm run start` for a dev server. Navigate to `http://localhost:4200/`.
@@ -19,7 +24,14 @@
 
 * Run `npm run lint` to execute code linter
 
-## Structure
+## Architecture
+
+### Styles (scss)
+
+* Code should following BEM styling.
+
+### Structure
+
 
 ## Assumptions
 

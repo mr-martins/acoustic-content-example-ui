@@ -11,6 +11,8 @@
     "moduleResolution": "node",
     "importHelpers": true,
     "target": "es2015",
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
     "typeRoots": [
       "node_modules/@types"
     ],
@@ -19,8 +21,12 @@
       "dom"
     ],
     "paths": {
-      "@acc-layout/*": ["app/layout/*"],
-      "@acc-shared/*": ["app/shared/*"]
+      "@acc-layout/*": [
+        "app/layout/*"
+      ],
+      "@acc-shared/*": [
+        "app/shared/*"
+      ]
     }
   },
   "angularCompilerOptions": {
