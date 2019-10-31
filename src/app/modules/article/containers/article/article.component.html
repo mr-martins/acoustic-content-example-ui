@@ -1,2 +1,3 @@
-<p>article works!</p>
-asdasd
+<div *ngIf="article$ | async as article">
+  {{ article.article.id }}
+</div>

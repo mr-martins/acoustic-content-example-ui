@@ -1,13 +1,8 @@
 import { Action, createReducer, on } from '@ngrx/store';
-import { Article } from '../../models/article.model';
 import * as ArticlePageActions from '../actions/article-page.actions';
+import { ArticleState } from '../../models/article-state.model';
 
 export const articleFeatureKey = 'article';
-
-export interface ArticleState {
-  article: Article;
-  errorMessage: string;
-}
 
 export const initialState: ArticleState = {
   article: null,
