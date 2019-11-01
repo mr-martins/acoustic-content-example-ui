@@ -25,17 +25,18 @@ export class ArticlesDataService {
     return this.httpClient.get<object>(
       `${this.baseApiUrl}delivery/v1/content/${this.articleId}`,
       { params: { fields: this.fields.join(',') } }
-    ).pipe(map((apiResponse: object) => {
-
-      return createArticle({
-        id: get(apiResponse, 'id'),
-        lastModified: get(apiResponse, 'lastModified'),
-        name: get(apiResponse, 'name'),
-        heading: get(apiResponse, 'elements.heading.value'),
-        author: get(apiResponse, 'elements.author.value'),
-        body: get(apiResponse, 'elements.body.values', []),
-        imageUrl: apiDomain + get(apiResponse, 'elements.mainImage.value.leadImage.renditions.card.url'),
-      });
-    }));
+    ).pipe(
+      map((apiResponse: object) => {
+        return createArticle({
+          id: get(apiResponse, 'id'),
+          lastModified: get(apiResponse, 'lastModified'),
+          name: get(apiResponse, 'name'),
+          heading: get(apiResponse, 'elements.heading.value'),
+          author: get(apiResponse, 'elements.author.value'),
+          body: get(apiResponse, 'elements.body.values', []),
+          imageUrl: apiDomain + get(apiResponse, 'elements.mainImage.value.leadImage.renditions.card.url'),
+        });
+      })
+    );
   }
 }

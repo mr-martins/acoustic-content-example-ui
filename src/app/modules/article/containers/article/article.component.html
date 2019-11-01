@@ -1,6 +1,8 @@
 <div *ngIf="articleState$ | async as articleState">
   <ng-container *ngIf="articleState.article as article; else error">
-    <div class="mat-small">{{ article.author }} at {{ article.lastModified | date }}</div>
+    <div *ngIf="article.author && article.lastModified"
+         class="mat-small">{{ article.author }} at {{ article.lastModified | date }}</div>
+
     <img class="article__image"
          [src]="article.imageUrl" alt="Main image">
 
