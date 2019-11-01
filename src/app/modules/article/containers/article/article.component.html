@@ -1,3 +1,8 @@
 <div *ngIf="article$ | async as article">
-  {{ article.id }}
+
+  <div class="mat-small">{{ article.author }} at {{ article.lastModified | date }}</div>
+  <img [src]="article.imageUrl" alt="Main image">
+
+  <h2>{{ article.heading }}</h2>
+  <div [innerHTML]="article.body.join('')"></div>
 </div>
