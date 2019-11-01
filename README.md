@@ -32,8 +32,11 @@
 
 ### Structure
 
-
-## Assumptions
-
-1. No translations needed.
+```
+--> app/src
+    --> layout - app layout
+    --> modules - business modules, lazy loaded
+        --> article
+    --> shared - shared components, models etc.
+```
 
