@@ -1,8 +1,17 @@
-<div *ngIf="article$ | async as article">
+<div *ngIf="articleState$ | async as articleState">
+  <ng-container *ngIf="articleState.article as article; else error">
+    <div class="mat-small">{{ article.author }} at {{ article.lastModified | date }}</div>
+    <img class="article__image"
+         [src]="article.imageUrl" alt="Main image">
 
-  <div class="mat-small">{{ article.author }} at {{ article.lastModified | date }}</div>
-  <img [src]="article.imageUrl" alt="Main image">
+    <h2>{{ article.heading }}</h2>
+    <div [innerHTML]="article.body.join('')"></div>
+  </ng-container>
 
-  <h2>{{ article.heading }}</h2>
-  <div [innerHTML]="article.body.join('')"></div>
+  <ng-template #error>
+    <div class="article__error">
+      <p>Cannot load article due to following reason.</p>
+      <p>{{ articleState.errorMessage }}</p>
+    </div>
+  </ng-template>
 </div>

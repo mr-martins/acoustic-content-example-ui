@@ -1,0 +1,10 @@
+.article {
+  &__image {
+    width: 480px;
+    height: auto;
+  }
+
+  &__error {
+    text-align: center;
+  }
+}
