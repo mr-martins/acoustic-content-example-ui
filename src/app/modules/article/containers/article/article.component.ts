@@ -4,6 +4,7 @@ import { selectArticle } from '../../store/selectors/article.selectors';
 import { Observable } from 'rxjs';
 import { AppState } from '@acc-shared/models/app-state.model';
 import { ArticleState } from '../../models/article-state.model';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'acc-article',
@@ -18,6 +19,6 @@ export class ArticleComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.articleState$ = this.store.select(selectArticle);
+    this.articleState$ = this.store.select(selectArticle).pipe(filter(x => !!x));
   }
 }

@@ -5,10 +5,7 @@ import { get } from 'lodash';
 
 export const articleFeatureKey = 'article';
 
-export const initialState: ArticleState = {
-  article: null,
-  errorMessage: null
-};
+export const initialState: ArticleState = null;
 
 const articleReducer = createReducer(
   initialState,

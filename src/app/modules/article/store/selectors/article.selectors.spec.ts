@@ -1,3 +1,0 @@
-describe('article selectors', () => {
-
-});
