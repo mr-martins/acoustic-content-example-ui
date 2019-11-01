@@ -4,7 +4,20 @@
   </mat-toolbar>
 
   <div class="layout__content">
-    <router-outlet></router-outlet>
+
+    <mat-card class="layout__content-main">
+      <mat-card-content>
+        <router-outlet></router-outlet>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="layout__content-side">
+      <mat-card-content>
+        <h3>Similar articles</h3>
+        <h3>Check also</h3>
+      </mat-card-content>
+    </mat-card>
+
   </div>
 </div>
 

@@ -6,12 +6,35 @@
   bottom: 0;
   left: 0;
   right: 0;
+  background-color: #F6F6F6;
 
   &__app-name {
     margin-left: 8px;
   }
 
   &__content {
-    padding: 10px;
+    display: flex;
+    justify-content: flex-start;
+    padding: 15px;
+    height: 100%;
+  }
+
+  &__content-main {
+    flex-basis: 75%;
+    margin-right: 15px;
+  }
+
+  &__content-side {
+    flex-basis: 25%;
+
+    mat-card-content {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+
+      h3 {
+        flex-basis: 25%;
+      }
+    }
   }
 }

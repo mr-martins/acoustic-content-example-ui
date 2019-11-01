@@ -1,8 +1,9 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { ArticleState } from '../../models/article-state.model';
-import { selectArticleFeature } from '../../store/selectors/article.selectors';
+import { selectArticle } from '../../store/selectors/article.selectors';
 import { Observable } from 'rxjs';
+import { Article } from '../../models/article.model';
+import { AppState } from '@acc-shared/models/app-state.model';
 
 @Component({
   selector: 'acc-article',
@@ -11,13 +12,12 @@ import { Observable } from 'rxjs';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ArticleComponent implements OnInit {
-  article$: Observable<ArticleState>;
+  article$: Observable<Article>;
 
-  constructor(private store: Store<ArticleState>) {
+  constructor(private store: Store<AppState>) {
   }
 
   ngOnInit() {
-    this.article$ = this.store.select(selectArticleFeature);
+    this.article$ = this.store.select(selectArticle);
   }
-
 }

@@ -1,4 +1,4 @@
-import { ArticleState } from '../../modules/article/store/reducers/article.reducers';
+import { ArticleState } from '../../modules/article/models/article-state.model';
 
 export interface AppState {
   article: ArticleState;

@@ -18,7 +18,7 @@ export class ArticleEffects {
     switchMap(() => this.articlesDataService.fetch()
       .pipe(
         map((article: Article) => ArticleAPIActions.fetchArticleSucceed({ article })),
-        catchError((error: HttpErrorResponse) => of(ArticleAPIActions.fetchArticleFailed({ errorMessage: error.message })))
+        catchError((error: HttpErrorResponse) => of(ArticleAPIActions.fetchArticleFailed({ error })))
       ))
     )
   );

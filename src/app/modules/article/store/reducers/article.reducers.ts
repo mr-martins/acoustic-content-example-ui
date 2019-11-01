@@ -6,13 +6,13 @@ export const articleFeatureKey = 'article';
 
 export const initialState: ArticleState = {
   article: null,
-  errorMessage: null
+  error: null
 };
 
 const articleReducer = createReducer(
   initialState,
-  on(ArticlePageActions.fetchArticleSucceed, (state, { article }) => ({ article })),
-  on(ArticlePageActions.fetchArticleFailed, (state, { errorMessage }) => ({ article: null, errorMessage })),
+  on(ArticlePageActions.fetchArticleSucceed, (state, { article }) => ({ article, error: null })),
+  on(ArticlePageActions.fetchArticleFailed, (state, { error }) => ({ error, article: null })),
 );
 
 export function reducer(state: ArticleState, action: Action) {
