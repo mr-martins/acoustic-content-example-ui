@@ -28,6 +28,7 @@ describe('ArticleResolver', () => {
 
     // then
     verify(mockedStore.dispatch(deepEqual(loadArticle()))).once();
+    expect().nothing();
   });
 
   it('should return null observable', (done: DoneFn) => {

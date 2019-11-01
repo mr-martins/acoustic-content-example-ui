@@ -4,7 +4,6 @@ export function createArticle(params?: Partial<Article>): Article {
 
 export interface Article {
   id: string;
-  name: string;
   lastModified: string;
   imageUrl: string;
   author: string;
