@@ -1,5 +1,5 @@
-import { ArticleState } from '../../modules/article/models/article-state.model';
+import { articleFeatureKey, ArticleFeatureState } from '../../modules/article/store/reducers';
 
 export interface AppState {
-  article: ArticleState;
+  [articleFeatureKey]: ArticleFeatureState;
 }
