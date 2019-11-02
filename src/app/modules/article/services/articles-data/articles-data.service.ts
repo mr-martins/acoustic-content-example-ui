@@ -5,7 +5,6 @@ import { Article, createArticle } from '../../models/article.model';
 import { map } from 'rxjs/operators';
 import { get } from 'lodash';
 
-
 @Injectable()
 export class ArticlesDataService {
   private readonly apiDomain = 'https://my12.digitalexperience.ibm.com';

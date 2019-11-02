@@ -19,7 +19,7 @@ describe('ArticleComponent', () => {
     TestBed.configureTestingModule({
       declarations: [ArticleComponent],
       providers: [
-        { provide: Store, useValue: instance(mockedStore) }
+        { provide: Store, useValue: instance(mockedStore) },
       ],
     }).compileComponents();
   }));
@@ -45,7 +45,7 @@ describe('ArticleComponent', () => {
     when(mockedStore.pipe(selectDefinedArticleState)).thenReturn(of(createArticleState({
       article: createArticle({
         body: [],
-      })
+      }),
     })));
 
     // when
@@ -78,7 +78,7 @@ describe('ArticleComponent', () => {
           body: [],
           author: 'testA',
           lastModified: '2019-10-10T10:10:10',
-        })
+        }),
       })));
 
       // when
@@ -94,7 +94,7 @@ describe('ArticleComponent', () => {
         article: createArticle({
           body: [],
           lastModified: '2019-10-10T10:10:10',
-        })
+        }),
       })));
 
       // when
@@ -110,7 +110,7 @@ describe('ArticleComponent', () => {
         article: createArticle({
           body: [],
           author: 'author',
-        })
+        }),
       })));
 
       // when

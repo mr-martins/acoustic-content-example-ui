@@ -16,7 +16,7 @@ describe('LayoutComponent', () => {
           RouterOutlet,
           MatToolbar,
           MatCard,
-          MatCardContent,
+          MatCardContent
         ),
       ],
     }).compileComponents();

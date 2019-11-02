@@ -21,7 +21,7 @@ describe('article reducers', () => {
     const result: ArticleState = fromArticle.reducer(null, ArticleAPIActions.fetchArticleFailed({
       error: {
         message: 'message',
-      } as HttpErrorResponse
+      } as HttpErrorResponse,
     }));
 
     // then
@@ -31,7 +31,7 @@ describe('article reducers', () => {
   it('fetchArticleFailed should set response error message', () => {
     // when
     const result: ArticleState = fromArticle.reducer(null, ArticleAPIActions.fetchArticleFailed({
-      error: { error: { errors: { message: 'message2' } } } as unknown as HttpErrorResponse
+      error: { error: { errors: { message: 'message2' } } } as unknown as HttpErrorResponse,
     }));
 
     // then

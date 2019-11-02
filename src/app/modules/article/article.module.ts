@@ -12,20 +12,20 @@ import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
-    ArticleComponent
+    ArticleComponent,
   ],
   imports: [
     CommonModule,
     ArticleRoutingModule,
     HttpClientModule,
     StoreModule.forFeature(fromArticleFeature.articleFeatureKey, fromArticleFeature.reducersMap),
-    EffectsModule.forFeature([ArticleEffects])
+    EffectsModule.forFeature([ArticleEffects]),
   ],
   providers: [
     ArticlesDataService,
     ArticleResolver,
     ArticleEffects,
-  ]
+  ],
 })
 export class ArticleModule {
 }

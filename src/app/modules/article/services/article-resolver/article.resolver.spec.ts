@@ -15,7 +15,7 @@ describe('ArticleResolver', () => {
     TestBed.configureTestingModule({
       providers: [
         ArticleResolver,
-        { provide: Store, useValue: instance(mockedStore) }
+        { provide: Store, useValue: instance(mockedStore) },
       ],
     });
 

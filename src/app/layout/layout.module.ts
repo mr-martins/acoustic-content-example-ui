@@ -12,7 +12,7 @@ import { MatCardModule, MatToolbarModule } from '@angular/material';
     MatCardModule,
   ],
   declarations: [LayoutComponent],
-  exports: [LayoutComponent]
+  exports: [LayoutComponent],
 })
 export class LayoutModule {
 }

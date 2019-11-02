@@ -15,7 +15,7 @@ describe('ArticlesDataService', () => {
     TestBed.configureTestingModule({
       providers: [
         ArticlesDataService,
-        { provide: HttpClient, useValue: instance(mockedHttpClient) }
+        { provide: HttpClient, useValue: instance(mockedHttpClient) },
       ],
     });
 
@@ -48,7 +48,7 @@ describe('ArticlesDataService', () => {
           author: { value: 'author' },
           body: { values: ['body'] },
           mainImage: { value: { leadImage: { renditions: { card: { url: '/url' } } } } },
-        }
+        },
       }));
       const expectedArticle = createArticle({
         id: 'Id',

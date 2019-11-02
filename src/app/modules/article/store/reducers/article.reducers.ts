@@ -12,7 +12,7 @@ const articleReducer = createReducer(
     const errorMessage = get(error, 'error.errors.message', error.message);
 
     return { errorMessage, article: null };
-  }),
+  })
 );
 
 export function reducer(state: ArticleState, action: Action) {

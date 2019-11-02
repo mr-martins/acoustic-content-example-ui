@@ -12,5 +12,5 @@ export interface ArticleFeatureState {
 export const selectArticleFeature = createFeatureSelector<AppState, ArticleFeatureState>(articleFeatureKey);
 
 export const reducersMap: ActionReducerMap<ArticleFeatureState> = {
-  article: fromArticle.reducer
+  article: fromArticle.reducer,
 };
