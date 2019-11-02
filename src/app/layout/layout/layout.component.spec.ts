@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { LayoutComponent } from './layout.component';
 import { MockComponents } from 'ng-mocks';
-import { MatToolbar } from '@angular/material';
+import { MatCard, MatCardContent, MatToolbar } from '@angular/material';
 import { RouterOutlet } from '@angular/router';
 import { By } from '@angular/platform-browser';
 
@@ -14,7 +14,9 @@ describe('LayoutComponent', () => {
         LayoutComponent,
         MockComponents(
           RouterOutlet,
-          MatToolbar
+          MatToolbar,
+          MatCard,
+          MatCardContent,
         ),
       ],
     }).compileComponents();
