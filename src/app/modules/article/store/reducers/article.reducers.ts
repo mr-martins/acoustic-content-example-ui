@@ -3,7 +3,6 @@ import * as ArticlePageActions from '../actions/article-page.actions';
 import { ArticleState } from '../../models/article-state.model';
 import { get } from 'lodash';
 
-
 export const initialState: ArticleState = null;
 
 const articleReducer = createReducer(

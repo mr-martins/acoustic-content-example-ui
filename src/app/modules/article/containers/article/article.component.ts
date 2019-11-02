@@ -1,10 +1,9 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { selectArticleState } from '../../store/selectors/article.selectors';
+import { selectDefinedArticleState } from '../../store/selectors/article.selectors';
 import { Observable } from 'rxjs';
 import { AppState } from '@acc-shared/models/app-state.model';
 import { ArticleState } from '../../models/article-state.model';
-import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'acc-article',
@@ -19,6 +18,6 @@ export class ArticleComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.articleState$ = this.store.select(selectArticleState).pipe(filter(x => !!x));
+    this.articleState$ = this.store.pipe(selectDefinedArticleState);
   }
 }
