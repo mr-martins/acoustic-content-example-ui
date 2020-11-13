@@ -1,5 +1,5 @@
 {
-  "name": "acoustic-content-web-app",
+  "name": "acoustic-content-example-ui",
   "version": "0.1.0",
   "scripts": {
     "ng": "ng",
@@ -24,13 +24,13 @@
     "@ngrx/effects": "^8.4.0",
     "@ngrx/store": "^8.4.0",
     "@ngrx/store-devtools": "^8.4.0",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.20",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.803.15",
+    "@angular-devkit/build-angular": "^0.803.25",
     "@angular/cli": "~8.3.15",
     "@angular/compiler-cli": "~8.2.12",
     "@angular/language-service": "~8.2.12",

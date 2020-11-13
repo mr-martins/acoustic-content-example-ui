@@ -1,4 +1,4 @@
-# AcousticContentWebApp
+# AcousticContentExampleUI
 
 ## Usage
 
@@ -28,7 +28,7 @@
 
 ### Styles (scss)
 
-* Code should following BEM styling.
+* Code should follow BEM styling.
 
 ### Structure
 
