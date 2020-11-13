@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "acoustic-content-web-app": {
+    "acoustic-content-example-ui": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/acoustic-content-web-app",
+            "outputPath": "dist/acoustic-content-example-ui",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -67,11 +67,11 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "acoustic-content-web-app:build"
+            "browserTarget": "acoustic-content-example-ui:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "acoustic-content-web-app:build:production"
+              "browserTarget": "acoustic-content-example-ui:build:production"
             }
           }
         },
@@ -107,7 +107,7 @@
       }
     }
   },
-  "defaultProject": "acoustic-content-web-app",
+  "defaultProject": "acoustic-content-example-ui",
   "cli": {
     "defaultCollection": "@ngrx/schematics"
   }
