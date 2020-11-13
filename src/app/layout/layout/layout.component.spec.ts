@@ -31,6 +31,6 @@ describe('LayoutComponent', () => {
     fixture.detectChanges();
 
     // then
-    expect(fixture.debugElement.query(By.css('h1')).nativeElement.innerText).toEqual('The Acoustic Content');
+    expect(fixture.debugElement.query(By.css('h1')).nativeElement.innerText).toEqual('Acoustic Content Example UI');
   });
 });

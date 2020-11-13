@@ -7,9 +7,9 @@ import { get } from 'lodash';
 
 @Injectable()
 export class ArticlesDataService {
-  private readonly apiDomain = 'https://my12.digitalexperience.ibm.com';
+  private readonly apiDomain = 'https://content-eu-4.content-cms.com';
   private readonly baseApiUrl: string = `${this.apiDomain}/api/859f2008-a40a-4b92-afd0-24bb44d10124/`;
-  private readonly articleId: string = 'fa9519d5-0363-4b8d-8e1f-627d802c08a8';
+  private readonly articleId: string = 'db4930e9-7504-4d9d-ae6c-33facca754d1';
   private readonly fields: string[] = [
     'id',
     'name',

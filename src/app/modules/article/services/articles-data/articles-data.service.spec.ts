@@ -26,8 +26,8 @@ describe('ArticlesDataService', () => {
     it('should call get() on httpClient', () => {
       // given
       when(mockedHttpClient.get<object>(anything(), anything())).thenReturn(of(null));
-      const expectedUrl = 'https://my12.digitalexperience.ibm.com/api/859f2008-a40a-4b92-afd0-24bb44d10124/' +
-        'delivery/v1/content/fa9519d5-0363-4b8d-8e1f-627d802c08a8';
+      const expectedUrl = 'https://content-eu-4.content-cms.com/api/859f2008-a40a-4b92-afd0-24bb44d10124/' +
+        'delivery/v1/content/db4930e9-7504-4d9d-ae6c-33facca754d1';
       const expectedFields: string = ['id', 'name', 'elements', 'lastModified'].join(',');
 
       // when
@@ -56,7 +56,7 @@ describe('ArticlesDataService', () => {
         heading: 'heading',
         author: 'author',
         body: ['body'],
-        imageUrl: 'https://my12.digitalexperience.ibm.com/url',
+        imageUrl: 'https://content-eu-4.content-cms.com/url',
       });
 
       // when
